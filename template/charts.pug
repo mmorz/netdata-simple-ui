@@ -1,8 +1,16 @@
-div(data-netdata='system.cpu' data-height=chartHeight)
-div(data-netdata='system.ram' data-height=chartHeight data-dimensions='used')
-div(data-netdata='system.load' data-height=chartHeight)
-div(data-netdata='system.io' data-height=chartHeight)
+div(data-netdata='system.load' data-height=chartHeight data-after=-timeRange)
+
+div(data-netdata='system.cpu' data-height=chartHeight data-after=-timeRange)
+
+div(data-netdata='system.ram' data-height=chartHeight data-dimensions='used'
+    data-dygraph-valuerange=`[0, ${ram}]`
+    data-after=-timeRange)
+
+div(data-netdata='system.io' data-height=chartHeight data-after=-timeRange)
+
+div(data-netdata='system.ipv4' data-height=chartHeight data-after=-timeRange)
 
 div(data-netdata='sensors.temp_thermal_zone0_thermal_thermal_zone0'
     data-height=chartHeight
-    data-dygraph-valuerange='[30, 80]')
+    data-dygraph-valuerange='[30, 80]'
+    data-after=-timeRange)
