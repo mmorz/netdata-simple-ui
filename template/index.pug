@@ -2,6 +2,9 @@ doctype html
 html
   head
     title server status
+    if dev
+      script.
+        var netdataServer = "http://london.my-netdata.io";
     script(type='text/javascript' src='dashboard.js')
   body
     .container

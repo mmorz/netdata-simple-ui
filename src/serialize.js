@@ -11,7 +11,7 @@ function packOutput(html) {
 
     fs.writeFile(`${path}/index.html`, html, (saveErr) => {
       if (saveErr) throw saveErr;
-      logger.info('done');
+      logger.info('template compile done');
     });
   });
 }
